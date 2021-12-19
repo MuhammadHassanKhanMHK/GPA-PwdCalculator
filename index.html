@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="overflow-y: hidden;">
+<div style="    background: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat center;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+                justify-content: center;">
+    <div style="width: 50% ;border: 1px solid rgb(20, 18, 18)
+                ;background: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80) no-repeat center;
+                border-radius: 10px;
+                padding: 50px 10px;">
+        <h1 style="color: rgb(85, 190, 85);">Enter Your Percentage !!</h1>
+
+        <input type="number" id="input1">
+        <button onclick="pwd()">Check Grade & GPA</button>
+        <!-- <h1>Your Percentage is:</h1> -->
+        <h1 id="result1" style="background-color: rgb(196, 223, 43);"></h1>
+    </div>
+</div>
+
+
+
+    <script>
+
+        function pwd() {
+                            // VAr Define
+            var input = document.getElementById("input1").value;
+            var gradeA1 = "You've Grade is A+ and GPA  : 4 ";
+            var gradeA = "You've Grade is A and GPA : 4 ";
+            var gradeB1 = "You've Grade is B and GPA : 3.9 ";
+            var gradeB2 = "You've Grade is B and GPA : 3.7 ";
+            var gradeB3 = "You've Grade is B and GPA : 3.5 ";
+            var gradeB4 = "You've Grade is B and GPA : 3.2 ";
+            var gradeB5 = "You've Grade is B and GPA : 3.0 ";
+            var gradeB = "You've Grade is B and GPA : 2.8 ";
+            var gradeC1 = "You've Grade is C and GPA : 2.5 ";
+            var gradeC2 = "You've Grade is C and GPA : 2.25 ";
+            var gradeC = "You've Grade is C and GPA : 2 ";
+            var gradeF = "You've Grade is F Fail and GPA : 0 ";
+            var Invalid = "Invalid Entery!!!!!  Again Enter  ";
+
+
+            if (input > 100) {
+                document.getElementById("result1").innerText = Invalid;
+            }
+            else if (input >= 95 && input <= 100) {
+                document.getElementById("result1").innerText = gradeA1;
+            }
+            else if (input >= 88 && input <= 94) {
+                document.getElementById("result1").innerText = gradeA;
+            }
+            else if (input >= 86 && input <= 87) {
+                document.getElementById("result1").innerText = gradeB1;
+            }
+            else if (input >= 83 && input <= 85) {
+                document.getElementById("result1").innerText = gradeB2;
+            }
+            else if (input >= 80 && input <= 82) {
+                document.getElementById("result1").innerText = gradeB3;
+            }
+            else if (input >= 77 && input <= 79) {
+                document.getElementById("result1").innerText = gradeB4;
+            }
+            else if (input >= 74 && input <= 76) {
+                document.getElementById("result1").innerText = gradeB5;
+            }
+            else if (input >= 70 && input <= 73) {
+                document.getElementById("result1").innerText = gradeB;
+            }
+            else if (input >= 67 && input <= 69) {
+                document.getElementById("result1").innerText = gradeC1;
+            }
+            else if (input >= 63 && input <= 66) {
+                document.getElementById("result1").innerText = gradeC2;
+            }
+            else if (input >= 60 && input <= 62) {
+                document.getElementById("result1").innerText = gradeC;
+            }
+            else if (input < 60) {
+                document.getElementById("result1").innerText = gradeF;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
